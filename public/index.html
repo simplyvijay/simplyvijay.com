@@ -1,264 +1,368 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <title>Vijay Venkatasubramani</title>
-    <meta name="description" content="Personal website of Vijay Venkatasubramani">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <meta property="og:title" content="Vijay Venkatasubramani - Senior Architect" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.simplyvijay.com" />
-    <meta property="og:image" content="https://www.simplyvijay.com/images/VIJAY.JPG" />
-    <meta property="og:description" content="Explore my interests, hobbies and philosophies." />
+    <meta name="description" content="Culturist and Technologist">
 
-    <meta property="og:image:width" content="537" />
-    <meta property="og:image:height" content="537" />
-    <meta property="og:site_name" content="Vijay Venkatasubramani's personal website" />
+    <!-- Open Graph data -->
+    <meta content="website" name="og:type" property="og:type"/>
+    <meta content="https://simplyvijay.com/profile.jpg" name="og:image" property="og:image"/>
+    <meta content="677" name="og:image:width" property="og:image:width"/>
+    <meta content="707" name="og:image:height" property="og:image:height"/>
+    <meta content="Vijay Venkatasubramani" name="og:title" property="og:title"/>
+    <meta content="Culturist and Technologist" name="og:description" property="og:description"/>
+    <meta content="https://simplyvijay.com" name="og:url" property="og:url"/>
+    <meta content="Vijay Venkatasubramani's personal website" name="og:site_name" property="og:site_name"/>
+    <meta content="en_US" name="og:locale" property="og:locale"/>
 
-    <link rel="stylesheet" href="assets/css/main.css"/>
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css"/>
-    </noscript>
     <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
+            "@context": "https://schema.org/",
             "@type": "Person",
             "name": "Vijay Venkatasubramani",
-            "jobTitle": "Senior Architect",
-            "url": "https://www.simplyvijay.com",
-            "image": "https://www.simplyvijay.com/images/VIJAY.JPG",
+            "url": "https://simplyvijay.com",
+            "image": "https://simplyvijay.com/profile.jpg",
             "sameAs": [
-                "https://www.linkedin.com/in/vijayv80",
-                "https://x.com/vijaycorner",
+                "https://linkedin.com/in/vijayv80",
+                "https://simplyvijay.com",
                 "https://facebook.com/messagevijay",
-                "https://blog.simplyvijay.com",
                 "https://youtube.com/@vijay80",
-                "https://instagram.com/iamsimplyvijay"
-            ]
+                "https://instagram.com/iamsimplyvijay",
+                "https://x.com/vijaycorner"
+            ],
+            "jobTitle": "Senior Architect",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Cognizant"
+            }
         }
     </script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"/>
+    <!-- Font Awesome -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- MDB ESSENTIAL -->
+    <link rel="stylesheet" href="css/mdb.min.css"/>
+    <!-- MDB PLUGINS -->
+    <link rel="stylesheet" href="plugins/css/all.min.css"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    <style></style>
 </head>
-<body class="is-preload">
 
-<!-- Sidebar -->
-<section id="sidebar">
-    <div class="inner">
-        <nav>
-            <ul>
-                <li><a href="#intro">Welcome</a></li>
-                <li><a href="#one">Interests</a></li>
-                <li><a href="#two">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</section>
+<body>
+<!-- Start your project here-->
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" data-mdb-navbar-init>
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">Vijay Venkatasubramani</a>
+            <button aria-controls="#sidenav-1" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-mdb-target="#sidenav-1"
+                    data-mdb-toggle="sidenav"
+                    type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#"><i class="fas fa-circle-info fa-1x fa-fw"
+                                                        style="color: inherit"></i> About</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#interests"><i class="fas fa-star fa-1x fa-fw"
+                                                                 style="color: inherit"></i> Interests</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#contact"><i class="fas fa-address-card fa-1x fa-fw"
+                                                               style="color: inherit"></i> Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
 
-<!-- Wrapper -->
-<div id="wrapper">
+    <!-- Sidenav -->
+    <nav
+            class="sidenav"
+            data-mdb-hidden="true"
+            data-mdb-sidenav-init
+            id="sidenav-1" style="box-shadow: 0 0 0 black;">
 
-    <!-- Intro -->
-    <section id="intro" class="wrapper style1 fullscreen fade-up">
-        <div class="inner">
+        <div class="sidenav-header" style="height: 7vh"></div>
+        <!-- A dummy placeholder for height adjustment of the sidenav-->
 
-            <p style="font-size: x-large"><span class="image right"><img style="opacity: 0.8; width: 70%; height: auto"
-                                                                         src="images/VIJAY.JPG"
-                                                                         alt="Vijay Venkatasubramani"/></span>
-                <b style="font-size: xx-large">Hi</b><br/> <hr style="@media only screen and (max-width: 600px){
-                    display: block;
-                }; display: none;"/>
-                I'm
-                Vijay Venkatasubramani. I'm passionate about culture, religion, software design, and cloud architecture.
-                I believe that there is an approach in everything in life that helps us to achieve what we want the
-                most.
-                I also strongly feel that there is a difference between <br/><i>something that is beautiful</i><br/><i>something
-                    I think that is beautiful</i><br/> and the life is always the latter case!</p>
+        <ul class="sidenav-menu"
+            style="background: #E0F2F1; backdrop-filter: blur(30px); border-radius: 7px">
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#">
+                    <i class="fas fa-home fa-2x fa-fw" style="color: #263238"></i>
+                    <span style="margin-left: 15px; font-size: large">Home</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#interests">
+                    <i class="fas fa-chalkboard-user fa-2x fa-fw" style="color: #263238"></i>
+                    <span style="margin-left: 15px; font-size: large">Interests</span></a>
+            </li>
+            <li class="sidenav-item">
+                <a class="sidenav-link" href="#contact"><i class="fas fa-address-card fa-2x fa-fw"
+                                                           style="color: #263238"></i><span
+                        style="margin-left: 15px; font-size: large">Contact</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Sidenav -->
+
+    <!--Section: Design Block-->
+    <section>
+        <div class="intro-image" id="intro">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+                <div class="container d-flex justify-content-center align-items-center h-100">
+                    <div class="row align-items-center">
+                        <span class="only-small-devices"><br></span>
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-3">
+                            <img src="profile.jpg" class="img-fluid" alt="Vijay Venkatasubramani"
+                                 style="border-radius: 10px;">
+                        </div>
+                        <span class="only-small-devices"><hr/></span>
+                        <div class="col-lg-5">
+                            <p class="text-white intro-text">
+                                I'm Vijay Venkatasubramani. I'm passionate about culture, religion, software design, and
+                                cloud architecture. I believe that there is an approach in everything in life that helps
+                                us to achieve what we want the most. I also strongly feel that there is a difference
+                                between
+                                <br/><i>something that is beautiful<br/>
+                                something I think that is beautiful</i><br/>
+                                and the life is always the latter case!
+                            </p>
+                            <a href="#interests">
+                                <button class="btn text-black" data-mdb-ripple-init style="background-color: #E0F2F1"
+                                        type="button">Learn more
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <!--Section: Design Block-->
+</header>
+<main>
 
+    <div class="container text-black">
+        <section id="interests">
+            <br>
+            <h1 class="text-center mt-5 mb-5">Interests</h1>
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="software-architecture.webp" class="img-fluid" alt="Software Architecture"
+                         style="border-radius: 10px;">
+                </div>
+                <span class="only-small-devices"><br></span>
+                <div class="col-lg-8">
+                    <h3>Senior Cloud Architect</h3>
+                    <p>
+                        Results-driven Cloud Architect with over 17+ years of experience in IT, specializing in cloud
+                        computing and infrastructure solutions for a variety of workloads. Expertise in designing and
+                        implementing scalable, secure, and cost-effective cloud architectures. Proven track record of
+                        leading complex cloud-based projects and engaging with senior stakeholders to deliver strategic
+                        business value.
+                    </p>
+                    <a class="btn text-white" data-mdb-ripple-init style="background-color: #0082ca;"
+                       href="https://linkedin.com/in/vijayv80" target="_blank" role="button">
+                        <i class="fab fa-linkedin me-2"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="ruparupam.jpg" class="img-fluid" alt="Ruparupam"
+                         style="border-radius: 10px;">
+                </div>
+                <span class="only-small-devices"><br></span>
+                <div class="col-lg-8">
+                    <h3>Ruparupam</h3>
+                    <p>
 
-    <!-- One -->
-    <section id="one" class="wrapper fade-up" style="padding-left: 2rem; padding-right: 3rem">
-        <section>
-            <br/>
-            <h3>Cloud Architecture</h3>
-            <p style="font-size: large"><span class="image left"><img src="images/cloud.png" style="width: 50%; height: auto"
-                                             alt="Cloud"/></span>
+                        Religion is all about practicality.<br>
+                        Scientific progress and Spiritual progress are not different.<br>
+                        Humans are independent thinkers and live with equal authority.<br>
+                        Everything changes and nothing changes are two contradicting realities.<br>
+                        God is always formless, although both perceivable and non-perceivable.<br>
+                        Many things can be understood, and some things can be only felt.<br>
+                        Awareness is of two types - with feelings & emotions and without feelings & emotions<br>
+                        Nothing is considered reality which is beyond understanding and feeling.<br>
 
-                Designing cloud solutions with AWS and Google Cloud involves architecting scalable, reliable, and
-                cost-effective systems using the technologies offered by these leading cloud providers.
-                It often requires balancing the specific strengths of AWS and Google Cloud to design the optimal
-                solution for a given project.<br/>
-                <a href="https://www.linkedin.com/in/vijayv80" target="_blank" class="icon brands fa-2x fa-linkedin"><span class="label">LinkedIn</span></a>
-            </p>
-            <hr style="height: 0.1px; background-color: whitesmoke;"/>
-            <h3>Ruparupam</h3>
-            <p style="font-size: large"><span class="image left"><img src="images/lingam.jpg" style="width: 50%; height: auto;"
-                                              alt="Lingam"/></span>
-                Religion is all about practicality.<br/>
-                Scientific progress and Spiritual progress are not different.<br/>
-                Humans are independent thinkers and live with equal authority.<br/>
-                Everything changes and nothing changes are two contradicting realities.<br/><br/>
-                <a href="https://ruparupam.org" target="_blank" class="button primary">Learn more</a>
-            </p>
-            <hr style="height: 0.1px; background-color: whitesmoke;"/>
-            <h3>Website building</h3>
-            <p style="font-size: large"><span class="image left"><img src="images/website.webp" style="width: 50%; height: auto"
-                                             alt="Cloud"/></span>
-
-                As a side hustle, I provide web and application development services, focusing on creating custom,
-                scalable solutions for clients. My expertise spans across designing user-friendly websites and
-                developing applications that meet specific business needs, ensuring both functionality and aesthetic
-                appeal.<br/><br/>
-                <a href="https://shreebalanrithyalaya.com" target="_blank" class="button primary">sample</a>
-            </p><br/>
+                    </p>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="website-building.jpg" class="img-fluid" alt="Website Building"
+                         style="border-radius: 10px;">
+                </div>
+                <span class="only-small-devices"><br></span>
+                <div class="col-lg-8">
+                    <h3>Website Building</h3>
+                    <p>
+                        I have a passion for building websites for professionals and businesses. You can contact me if
+                        you need a personal or business website.
+                    </p>
+                    <a class="btn text-black" data-mdb-ripple-init style="background-color: #4DB6AC;"
+                       href="https://shreebalanrithyalaya.com" target="_blank" role="button">
+                        View Sample
+                    </a>
+                </div>
+            </div>
+            <hr/>
         </section>
-    </section>
+        <section id="contact">
+            <br>
+            <h1 class="text-center mt-5 mb-5">Contact Me</h1>
+            <div class="text-center text-lg-start">
+                <div class="row gx-lg-5 align-items-center">
+                    <div class="col-lg-6 position-relative">
+                        <div class="card bg-glass">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <div class="text-left contact-card">
+                                    <i class="fa fa-envelope fa-1x"></i> <a
+                                        href="mailto:contact@shreebalanrithyalaya.com">contact@simplyvijay.com</a>
+                                    <br>
+                                    <i class="fa fa-phone fa-1x"></i> <a href="tel:+919952947774">+91 99529 47774</a>
+                                    <br>
+                                    <i class="fa fa-map-marker fa-1x"></i> Perumbakkam, Chennai, India<br>
+                                    <i class="fa fa-signs-post fa-1x"></i> <a href="https://maps.app.goo.gl/1RmaotRqw4hPejHMA" target="_blank">Get
+                                        Directions</a>
+                                </div>
 
-    <!-- Three -->
-    <section id="two" class="wrapper style1 fade-up">
-        <div class="inner">
-            <h2>Get in touch</h2>
-            <div class="split style1">
-                <section>
-                    <form id="my-form">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name"/>
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email"/>
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="5"></textarea>
+                                <br>
+
+                                <form id="contactForm">
+                                    <!-- Full name input -->
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="text" id="name_input" name="name" class="form-control"/>
+                                        <label class="form-label" for="name_input">Full Name</label>
+                                        <div class="invalid-feedback">Please provide a valid name.</div>
+                                    </div>
+
+                                    <!-- Email input -->
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="email" id="email_input" name="email" class="form-control"/>
+                                        <label class="form-label" for="email_input">Email address</label>
+                                        <div class="invalid-feedback">Please provide a valid email.</div>
+                                    </div>
+
+                                    <!-- Subject input -->
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="text" id="subject_input" name="subject" class="form-control"/>
+                                        <label class="form-label" for="subject_input">Subject</label>
+                                        <div class="invalid-feedback">Please provide a valid subject.</div>
+                                    </div>
+
+                                    <!-- Message input -->
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <textarea class="form-control" id="message_input" name="message" rows="4"></textarea>
+                                        <label class="form-label" for="message_input">Message</label>
+                                        <div class="invalid-feedback">Please provide a valid message.</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-3"></div>
+                                        <div class="col-6">
+                                            <!-- Submit button -->
+                                            <button id="contactButton" data-mdb-button-init data-mdb-ripple-init
+                                                    class="btn btn-block"
+                                                    style="background-color: #4DB6AC;">
+                                                Submit
+                                            </button>
+                                        </div>
+                                        <p class="text-center" id="status"></p>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <ul class="actions">
-                            <li><a id="my-form-button" class="button primary" onclick="handleSubmit()">Send Message</a></li>
-                        </ul>
-                        <p id="my-form-status"></p>
-                    </form>
-                </section>
-                <section>
-                    <ul class="contact">
-                        <li>
-                            <h3>Location</h3>
-                            <span>Chennai, India</span>
-                        </li>
-                        <li>
-                            <h3>Email</h3>
-                            <a href="mailto:contact@simplyvijay.com">contact@simplyvijay.com</a>
-                        </li>
-                        <li>
-                            <h3>Mobile</h3>
-                            <span>+91 9952947774</span>
-                        </li>
-                        <li>
-                            <h3>Social</h3>
-                            <ul class="icons">
-                                <li><a href="https://x.com/vijaycorner" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a href="https://facebook.com/messagevijay" target="_blank" class="icon brands fa-facebook-f"><span
-                                        class="label">Facebook</span></a></li>
-                                <li><a href="https://blog.simplyvijay.com" target="_blank" class="icon brands fa-blogger-b"><span class="label">Blogger</span></a></li>
-                                <li><a href="https://instagram.com/iamsimplyvijay" target="_blank" class="icon brands fa-instagram"><span
-                                        class="label">Instagram</span></a></li>
-                                <li><a href="https://www.linkedin.com/in/vijayv80" target="_blank" class="icon brands fa-linkedin-in"><span
-                                        class="label">LinkedIn</span></a></li>
-                                <li><a href="https://www.youtube.com/@vijay80" target="_blank" class="icon brands fa-youtube"><span
-                                        class="label">YoutTube</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
+                    </div>
+                    <div class="col-lg-6 only-large-devices">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9509470102853!2d80.20007787676606!3d12.91087431620341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c11bcddb621%3A0x67e9f20245d7fb53!2sBlock-A1%2C%20INDIA%20BULLS%20GREENS%2C%20VGP%20Prabhu%20Nagar%2C%20Medavakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600100!5e0!3m2!1sen!2sin!4v1721233870447!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
-            <br/><br/><br/>
-            <blockquote>Get busy living or get busy dying</blockquote>
-        </div>
-    </section>
-</div>
-
-<!-- Footer -->
-<footer id="footer" class="wrapper style1-alt">
-    <div class="inner">
-        <ul class="menu">
-            <li>&copy; Vijay V. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
+            <br>
+            <h3 class="text-center">Follow me</h3>
+            <div class="text-center">
+                <a class="btn text-white btn-lg btn-floating" data-mdb-ripple-init style="background-color: #ffac44;" href="https://blog.simplyvijay.com" target="_blank" role="button">
+                    <i class="fab fa-blogger-b"></i>
+                </a>
+                <a class="btn text-white btn-lg btn-floating" data-mdb-ripple-init style="background-color: #0082ca;" href="https://linkedin.com/in/vijayv80" target="_blank" role="button">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn text-white btn-lg btn-floating" data-mdb-ripple-init style="background-color: #ac2bac;" href="https://instagram.com/iamsimplyvijay" target="_blank" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn text-white btn-lg btn-floating" data-mdb-ripple-init style="background-color: #333333;" href="https://x.com/vijaycorner" target="_blank" role="button">
+                    <i class="fab fa-x"></i>
+                </a>
+                <a class="btn text-white btn-lg btn-floating" data-mdb-ripple-init style="background-color: #3b5998;" href="https://facebook.com/messagevijay" target="_blank" role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn text-white btn-lg btn-floating" data-mdb-ripple-init style="background-color: #ed302f;" href="https://youtube.com/@vijay80" target="_blank" role="button">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+</main>
+<br>
+<footer class="text-center text-lg-start text-black">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+        © 2024 Simplyvijay.com
     </div>
 </footer>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
-<script>
-    var form = document.getElementById("my-form");
-
-    async function handleSubmit() {
-        console.log('Function called');
-        var status = document.getElementById("my-form-status");
-        var data = new FormData(form);
-
-        if(isFormDataInvalid(data)) return;
-
-        fetch("https://formspree.io/f/mzbnrway", {
-            method: 'POST',
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                status.innerHTML = "Thanks for your submission!";
-                form.reset()
-            } else {
-                response.json().then(data => {
-                    if (Object.hasOwn(data, 'errors')) {
-                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                    } else {
-                        status.innerHTML = "Oops! There was a problem submitting your form"
-                    }
-                })
-            }
-        }).catch(error => {
-            status.innerHTML = "Oops! There was a problem submitting your form"
-        });
-    }
-
-    function isAlphabetAndSpace(str) {
-        return /^[A-Za-z\s]+$/.test(str);
-    }
-
-    function isBlank(str) {
-        return (!str || str.trim() === "");
-    }
-
-    function isValidEmail(email) {
-        const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return regex.test(email);
-    }
-
-    function isFormDataInvalid(data) {
-        return !isAlphabetAndSpace(data.get('name'))
-            || isBlank(data.get('message'))
-            || !isValidEmail(data.get('email'));
-    }
-
-</script>
-
+<!-- End your project here-->
 </body>
+
+<!-- MDB ESSENTIAL -->
+<script type="text/javascript" src="js/mdb.umd.min.js"></script>
+<!-- MDB PLUGINS -->
+<script type="text/javascript" src="plugins/js/all.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript"></script>
 </html>

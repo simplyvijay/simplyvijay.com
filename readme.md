@@ -2,6 +2,6 @@
 Firebase deployment instructions
 
 ```shell
-firebase deploy --only:simplyvijay-cd793
+firebase deploy --only hosting:simplyvijay-cd793
 ```
 

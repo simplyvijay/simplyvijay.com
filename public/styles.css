@@ -30,7 +30,7 @@
   background-color: #B2DFDB;
 }
 
-@media (max-width: 450px) {
+/*@media (max-width: 450px) {
   #intro {
     height: 950px !important;
   }
@@ -46,7 +46,7 @@
   #intro {
     height: 600px !important;
   }
-}
+}*/
 
 body {
   background-color: #E0F2F1;

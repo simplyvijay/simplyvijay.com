@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijay Venkatasubramani - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Base Styling */
+        :root {
+            --dark-bg: #0d0d0d;
+            --neon-blue: #00ffff; /* Cyan */
+            --neon-green: #39ff14; /* Lime green */
+            --neon-purple: #bf00ff; /* Electric purple */
+            --bright-text: #e0e0e0; /* Off-white for readability */
+            --neon-glow-intensity: 0 0 8px, 0 0 20px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--bright-text);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            text-align: center;
+            color: var(--neon-blue);
+            text-shadow: var(--neon-glow-intensity) var(--neon-blue);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+        }
+
+        h2 {
+            font-size: 2.2em;
+        }
+
+        h3 {
+            font-size: 1.8em;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: var(--neon-green);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--neon-purple);
+            text-shadow: var(--neon-glow-intensity) var(--neon-purple);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .navbar a {
+            color: var(--neon-blue);
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            text-shadow: var(--neon-glow-intensity) var(--neon-blue);
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            background-color: rgba(0, 255, 255, 0.1);
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            text-shadow: var(--neon-glow-intensity) var(--neon-green);
+            transform: scale(1.05);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0; /* Adjusted for fixed nav */
+            margin-top: 60px; /* Space for fixed nav */
+            min-height: calc(100vh - 60px); /* At least viewport height minus nav height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* For potential background effects */
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #1a0033 100%);
+            border-bottom: 2px solid var(--neon-purple);
+        }
+
+        .content-section {
+            background-color: var(--dark-bg);
+            border-bottom: 2px solid var(--neon-blue);
+        }
+
+        .content-section:last-of-type {
+            border-bottom: none;
+        }
+
+
+        /* Home Section */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 30px;
+            border: 5px solid var(--neon-green);
+            box-shadow: var(--neon-glow-intensity) var(--neon-green), 0 0 30px var(--neon-green);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: var(--neon-glow-intensity) var(--neon-purple), 0 0 40px var(--neon-purple);
+        }
+
+        .hero-section p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.15em;
+            color: var(--bright-text);
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Interests Section */
+        .interest-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .interest-item {
+            background-color: #1a1a1a;
+            border: 2px solid var(--neon-blue);
+            box-shadow: var(--neon-glow-intensity) var(--neon-blue);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            width: 280px;
+            transition: all 0.3s ease;
+        }
+
+        .interest-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--neon-green);
+            box-shadow: var(--neon-glow-intensity) var(--neon-green), 0 0 30px var(--neon-green);
+        }
+
+        .interest-item i {
+            font-size: 3.5em;
+            color: var(--neon-purple);
+            margin-bottom: 15px;
+            text-shadow: var(--neon-glow-intensity) var(--neon-purple);
+        }
+
+        .interest-item h3 {
+            margin-top: 0;
+            color: var(--neon-green);
+            text-shadow: var(--neon-glow-intensity) var(--neon-green);
+        }
+
+        .interest-item p {
+            color: var(--bright-text);
+            font-size: 0.95em;
+        }
+
+        .interest-item .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            line-height: 1;
+            font-size: 1.5em;
+            margin-top: 15px;
+            text-decoration: none;
+        }
+
+        .interest-item .social-btn i {
+            text-shadow: var(--neon-glow-intensity) var(--neon-blue);
+        }
+
+        /* Contact Section */
+        .contact-form {
+            background-color: #1a1a1a;
+            border: 2px solid var(--neon-blue);
+            box-shadow: var(--neon-glow-intensity) var(--neon-blue);
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 40px auto 60px;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--neon-green);
+            text-shadow: 0 0 3px var(--neon-green);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 2px solid var(--neon-purple);
+            background-color: #0d0d0d;
+            color: var(--bright-text);
+            border-radius: 5px;
+            font-size: 1em;
+            outline: none;
+            box-shadow: inset var(--neon-glow-intensity) var(--neon-purple);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: var(--neon-green);
+            box-shadow: inset var(--neon-glow-intensity) var(--neon-green), 0 0 10px var(--neon-green);
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--neon-blue);
+            color: var(--dark-bg);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--neon-glow-intensity) var(--neon-blue);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--neon-green);
+            box-shadow: var(--neon-glow-intensity) var(--neon-green);
+            transform: translateY(-2px);
+        }
+
+        .map-container {
+            margin-top: 60px;
+            background-color: #1a1a1a;
+            border: 2px solid var(--neon-purple);
+            box-shadow: var(--neon-glow-intensity) var(--neon-purple);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .map-container iframe {
+            border-radius: 8px;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .map-container p {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: var(--bright-text);
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+        }
+
+
+        .social-buttons {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .social-buttons h3 {
+            margin-bottom: 25px;
+        }
+
+        .social-btn {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 2.2em;
+            margin: 0 15px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            color: var(--neon-blue);
+            border: 2px solid var(--neon-blue);
+            box-shadow: var(--neon-glow-intensity) var(--neon-blue);
+            transition: all 0.3s ease;
+            text-shadow: none; /* Remove text-shadow from icon itself for clearer effect */
+        }
+
+        .social-btn i {
+            text-shadow: var(--neon-glow-intensity) var(--neon-blue);
+        }
+
+        .social-btn:hover {
+            background-color: rgba(0, 255, 255, 0.1);
+            color: var(--neon-green);
+            border-color: var(--neon-green);
+            box-shadow: var(--neon-glow-intensity) var(--neon-green), 0 0 30px var(--neon-green);
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .navbar a {
+                padding: 8px 12px;
+                margin: 0 5px;
+                font-size: 1em;
+            }
+
+            .hero-section p {
+                font-size: 1em;
+            }
+
+            .interest-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .interest-item {
+                width: 80%;
+                max-width: 350px;
+            }
+
+            .contact-form, .map-container {
+                padding: 20px;
+                margin: 30px auto;
+            }
+
+            .social-btn {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 1.8em;
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .navbar a {
+                display: block;
+                margin: 5px auto;
+                border-bottom: 1px dashed rgba(0, 255, 255, 0.3);
+                width: fit-content;
+            }
+
+            .navbar {
+                padding: 10px 0;
+                height: auto; /* Allow height to adjust for stacked links */
+            }
+
+            section {
+                padding: 60px 0;
+                margin-top: 150px; /* Adjust for stacked nav links */
+                min-height: calc(100vh - 150px);
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .contact-form, .map-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#interests">Interests</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero-section">
+    <div class="container">
+        <img src="profile.jpg" alt="Vijay Venkatasubramani" class="profile-img">
+        <h1>Vijay Venkatasubramani</h1>
+        <p>I'm passionate about culture, religion, software design, and cloud architecture. I believe that there is an
+            approach in everything in life that helps us to achieve what we want the most. I also strongly feel that
+            there is a difference between 'something that is beautiful' and 'something I think that is beautiful' and
+            the life is always the latter case!</p>
+    </div>
+</section>
+
+<section id="interests" class="content-section">
+    <div class="container">
+        <h2>My Interests</h2>
+        <div class="interest-list">
+            <div class="interest-item">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud Architect</h3>
+                <p>Designing scalable, resilient, and cost-effective cloud solutions.</p>
+                <a href="https://linkedin.com/in/vijayv80" target="_blank" rel="noopener noreferrer" class="social-btn"
+                   style="margin-top:15px;" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <div class="interest-item">
+                <i class="fas fa-om"></i>
+                <h3>Shaivam</h3>
+                <p>Exploring the rich philosophy and traditions of Shaivism.</p>
+            </div>
+            <div class="interest-item">
+                <i class="fas fa-code"></i>
+                <h3>Website Building</h3>
+                <p>Crafting engaging and functional web experiences from scratch.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="content-section">
+    <div class="container">
+        <h2>Get in Touch</h2>
+
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="map-container">
+            <h3>My Location</h3>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.824240407338!2d72.82517031485966!3d19.07172088709549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91e1f1c79e7%3A0x6d1e4e4b5f0f0d2c!2sIndiabulls%20Greens%20Apartments%2C%20A1%20Block!5e0!3m2!1sen!2sin!4v1633500000000!5m2!1sen!2sin"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>A1-Block Indiabulls Greens Apartments</p>
+        </div>
+
+        <div class="social-buttons">
+            <h3>Connect with me</h3>
+            <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+            <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+                    class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Update active class for navigation
+                document.querySelectorAll('.navbar a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Optional: Add active class on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-50% 0px -50% 0px', // Adjusted to activate when section is roughly in the middle
+            threshold: 0 // Only trigger when the section crosses the middle of the viewport
+        };
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${entry.target.id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Form submission (placeholder - in a real app, this would send data to a backend)
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+
+                // Basic client-side validation
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !message) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                if (!/\S+@\S+\.\S+/.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                // Simulate form submission
+                console.log('Form submitted:', {name, email, message});
+                alert('Thank you for your message, Vijay will get back to you soon!');
+                this.reset(); // Clear the form
+            });
+        }
+    });
+</script>
+</body>
+</html>
